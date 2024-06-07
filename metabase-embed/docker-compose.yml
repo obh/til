@@ -1,0 +1,24 @@
+version: '3.8'
+
+networks:
+  my-network:
+    driver: bridge
+
+services:
+  metabase:
+    image: metabase/metabase
+    restart: always
+    environment:
+      MB_DB_TYPE: 'mysql'
+      MB_DB_DBNAME: 'metabase'
+      MB_DB_PORT: 3306
+      MB_DB_USER: 'root'
+      MB_DB_HOST: 'host.docker.internal'
+      MB_DB_PASS: 'cashfree.123'
+    ports:
+      # <Port exposed>:<Port running inside container>
+      - '3000:3000'
+    networks:
+      - my-network
+
+
