@@ -14,7 +14,7 @@ services:
       MB_DB_PORT: 3306
       MB_DB_USER: 'root'
       MB_DB_HOST: 'host.docker.internal'
-      MB_DB_PASS: 'cashfree.123'
+      MB_DB_PASS: '{67jb123sdf1!dfd}'
     ports:
       # <Port exposed>:<Port running inside container>
       - '3000:3000'
