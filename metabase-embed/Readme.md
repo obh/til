@@ -11,7 +11,7 @@ The first time metabase will setup it's tables and drivers and other settings. S
 
 Create a question in metabase and then create an embed. Ensure that in the account you have enabled static embedding. Dynamic embedding is only available to pro/enterprise users. 
 
-![embed view](images/static-embed.jpeg)
+![embed view](images/static-embed.jpg)
 
 
 ## Step 3: Embed in your application
