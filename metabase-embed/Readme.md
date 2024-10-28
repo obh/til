@@ -3,7 +3,7 @@ This shows how to setup metabaes docker image and then embed a question.
 ## Step 1: Setting up metabase
 
 Edit the `docker-compose.yml` file and set the right value for the mysql password and ensure the connection works. 
-`docker compose up`
+`docker compose up -d`
 
 The first time metabase will setup it's tables and drivers and other settings. So be patient for that. 
 

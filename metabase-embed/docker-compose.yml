@@ -9,16 +9,26 @@ services:
     image: metabase/metabase
     restart: always
     environment:
-      MB_DB_TYPE: 'mysql'
+      MB_DB_TYPE: 'postgres'
       MB_DB_DBNAME: 'metabase'
-      MB_DB_PORT: 3306
-      MB_DB_USER: 'root'
-      MB_DB_HOST: 'host.docker.internal'
-      MB_DB_PASS: '{67jb123sdf1!dfd}'
+      MB_DB_PORT: 5432
+      MB_DB_USER: 'metabase'
+      MB_DB_HOST: 'postgres'
+      MB_DB_PASS: 'metabase'
     ports:
-      # <Port exposed>:<Port running inside container>
       - '3000:3000'
     networks:
       - my-network
 
+  postgres:
+    image: postgres:17.0
+    environment:
+      POSTGRES_USER: metabase
+      POSTGRES_DB: metabase
+      POSTGRES_PASSWORD: metabase
+    #command: tail -f /etc/fstab
+    volumes:
+      - ./pg:/var/lib/postgresql/data
+	networks:
+	  - my-network
 

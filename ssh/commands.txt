@@ -1,0 +1,13 @@
+# SSH Frequently useful commands
+
+## tunnel to some service running in report port
+
+8080 - local port
+80 - remote port
+
+`ssh -L 8080:localhost:80 username@server`
+
+On the browser open http://localhost:8080
+
+
+
