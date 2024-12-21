@@ -40,3 +40,12 @@ To github.com:obh/simulation.git
  * [new branch]      coach_audio_fix_4 -> coach_audio_fix_4
 
 ```
+
+
+OR
+
+You can just do 
+1. git pull origin master --rebase
+2. Do your rebase
+   a. basiclly solving your conflict and adding the file back and then doing git rebase --continue
+3. git push --force-with-lease origin <your–current-branch>  
